@@ -1,0 +1,10 @@
+{
+  "name": "git-update",
+  "version": "0.1.0",
+  "author": "Jan Baer",
+  "devDependencies": {},
+  "dependencies": {
+    "colors": "~0.6.0-1",
+    "underscore": "~1.5.1"
+  }
+}
