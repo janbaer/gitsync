@@ -10,7 +10,7 @@ var fs = require('fs'),
 
 var gitcommand = '/usr/local/git/bin/git';
 
-if (os.platform === 'darwin') {
+if (os.platform() === 'darwin') {
   gitcommand = '/usr/local/git/bin/git';
 } else {
   gitcommand = process.env.GIT_BIN;
