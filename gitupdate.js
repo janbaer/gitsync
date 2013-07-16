@@ -12,6 +12,8 @@ var gitcommand = '/usr/local/git/bin/git';
 
 if (os.platform === 'darwin') {
   gitcommand = '/usr/local/git/bin/git';
+} else {
+  gitcommand = process.env.GIT_BIN;
 }
 
 var fileName = path.join(__dirname, '/repositories.json');
