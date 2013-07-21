@@ -30,9 +30,16 @@
     "is": true,
     "setup": true,
     "suite": true,
+    "describe": true,
+    "assert": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "it": true,
+    "expect": true,
     "teardown": true,
     "requirejs": true,
     "test": true,
-    "node": true
+    "node": true,
+    "when": true
   }
 }

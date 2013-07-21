@@ -2,7 +2,11 @@
   "name": "git-update",
   "version": "0.1.0",
   "author": "Jan Baer",
-  "devDependencies": {},
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "sinon": "~1.7.3",
+    "q": "~0.9.6"
+  },
   "dependencies": {
     "colors": "~0.6.0-1",
     "underscore": "~1.5.1"

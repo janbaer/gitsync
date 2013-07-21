@@ -21,7 +21,7 @@ var readRepositories = function(fileName) {
 var gitcommand = '/usr/local/git/bin/git';
 
 if (os.platform() !== 'darwin') {
-  gitcommand = process.env.GIT_BIN;
+  gitcommand = process.env.GIT_BIN; // Read the location of Git from the environment variable
 }
 
 var fileName = path.join(__dirname, '/repositories.json');
