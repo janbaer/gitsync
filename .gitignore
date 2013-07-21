@@ -5,6 +5,9 @@ node_modules/
 *~
 *.log
 
+.tern-port
+
 .idea/
 
 repositories.json
+
