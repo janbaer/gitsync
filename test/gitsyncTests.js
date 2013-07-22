@@ -1,8 +1,6 @@
-
 'use strict';
 var sinon = require('sinon'),
     path = require('path'),
-    fs = require('fs'),
     expect = require('expect.js');
 
 var reader = require('../repositoryReader');
