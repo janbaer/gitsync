@@ -4,7 +4,7 @@
   "author": "Jan Baer",
   "devDependencies": {
     "expect.js": "~0.2.0",
-    "sinon": "~1.7.3",
+    "sinon": "~1.7.3"
   },
   "dependencies": {
     "q": "~0.9.6",
