@@ -5,15 +5,25 @@ var fs = require('fs'),
   exec = require('child_process').exec,
   util = require('util'),
   os = require('os'),
-  colors = require('colors'),
-  _ = require('underscore');
+  _ = require('underscore'),
+  reader = require('./repositoryReader');
 
-var reader = require('./repositoryReader');
+require('colors');
 
 var gitcommand = '/usr/local/git/bin/git';
-
 if (os.platform() !== 'darwin') {
   gitcommand = process.env.GIT_BIN; // Read the location of Git from the environment variable
+}
+
+var updateMode = 'pull';
+if (process.argv.length >= 3 && process.argv[2] === 'status') {
+  updateMode = 'status';
+}
+
+if (updateMode === 'pull') {
+  gitcommand = gitcommand + ' pull';
+} else {
+  gitcommand = gitcommand + ' fetch && ' + gitcommand + ' status';
 }
 
 var fileName = path.join(__dirname, '/repositories.json');
@@ -34,7 +44,7 @@ reader.readFile(fileName)
             env: null
           }
 
-          exec(gitcommand + ' pull', options, function(error, stdout) {
+          exec(gitcommand , options, function(error, stdout) {
             var message;
 
             if (error !== null) {
